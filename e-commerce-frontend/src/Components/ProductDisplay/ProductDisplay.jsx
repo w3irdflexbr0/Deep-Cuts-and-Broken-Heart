@@ -72,22 +72,22 @@ const ProductDisplay = (props) => {
         return "https://embed.music.apple.com/us/album/mock-heroic/541298870"
 
       case 19: 
-        return 
+        return "https://embed.music.apple.com/us/album/memphis-may-fire-ep/1643925467"
 
       case 20:
         return "https://embed.music.apple.com/us/album/hiatus/268503529"
 
       case 21:
-        return 
+        return "https://embed.music.apple.com/us/album/they-live/293717022"
 
       case 22:
         return "https://embed.music.apple.com/us/album/accidents-with-intelligence/1546626466"
 
       case 23:
-        return 
+        return "https://embed.music.apple.com/us/album/definitions/1558588952"
 
       case 24:
-        return 
+        return "https://embed.music.apple.com/us/album/at-daggers-drawn/1650496688"
 
       //Post-Hardcore
 
@@ -98,13 +98,13 @@ const ProductDisplay = (props) => {
         return "https://embed.music.apple.com/us/album/estimated-time-of-arrival-ep/445905115"
 
       case 27: 
-        return 
+        return "https://embed.music.apple.com/us/album/the-vision-and-reality/1526291373"
 
       case 28:
         return "https://embed.music.apple.com/us/album/cliche-while-still-captivating/81626466"
 
       case 29:
-        return
+        return "https://embed.music.apple.com/us/album/conversations/1640794355"
 
       case 30: 
         return "https://embed.music.apple.com/us/album/we-are-the-media-exclusive-online-version/273015472"
@@ -113,7 +113,7 @@ const ProductDisplay = (props) => {
         return "https://embed.music.apple.com/us/album/i-call-this-abandonment/1533154352"
 
       case 32:
-        return 
+        return "https://embed.music.apple.com/us/album/soundtrack-to-a-headrush/1441454596"
 
       case 33: 
         return "https://embed.music.apple.com/us/album/objects-in-mirror-ep/1627281440"
@@ -125,7 +125,7 @@ const ProductDisplay = (props) => {
         return "https://embed.music.apple.com/us/album/a-reason-for-treason-ep/518783209"
 
       case 36:
-        return "https://embed.music.apple.com/us/album/life-between-sleep-demo-ep/1100301596"
+        return "https://embed.music.apple.com/us/album/the-octopus-in-the-igloo/150380597"
 
       
     
@@ -166,7 +166,7 @@ const ProductDisplay = (props) => {
         </div>
         <div className="productdisplay-right-size">
           <button onClick={() => setShowAppleMusicEmbed(!showAppleMusicEmbed)}>
-            {showAppleMusicEmbed ? "Hide Apple Music" : "Show Apple Music"}
+            {showAppleMusicEmbed ? "Hide Tracklist" : "Show Tracklist"}
           </button>
           {showAppleMusicEmbed && appleMusicEmbed && (
             <iframe

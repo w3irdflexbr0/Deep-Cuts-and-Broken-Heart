@@ -182,7 +182,7 @@ let all_product = [
   },
   {
     id: 19,
-    name: "The Good News",
+    name: "Memphis May Fire - EP",
     category: "metalcore",
     image: p19_img,
     new_price: 4.99
@@ -198,10 +198,10 @@ let all_product = [
   },
   {
     id: 21,
-    name: "The Last Call - EP ",
+    name: "They Live",
     category: "metalcore",
     image: p21_img,
-    new_price: 4.99,
+    new_price: 7.99,
 
   },
   {
@@ -214,15 +214,15 @@ let all_product = [
   },
   {
     id: 23,
-    name: "Welcome to Palm City",
+    name: "Definitions",
     category: "metalcore",
     image: p23_img,
-    new_price: 4.99,
+    new_price: 7.99,
 
   },
   {
     id: 24,
-    name: "Conviction",
+    name: "At Daggers Drawn",
     category: "metalcore",
     image: p24_img,
     new_price: 7.99,
@@ -246,7 +246,7 @@ let all_product = [
   },
   {
     id: 27,
-    name: "Monster Eats The Pilot",
+    name: "The Vision and Reality",
     category: "post-hardcore",
     image: p27_img,
     new_price: 7.99,
@@ -262,10 +262,10 @@ let all_product = [
   },
   {
     id: 29,
-    name: "A Sinking Feeling - EP",
+    name: "Conversations",
     category: "post-hardcore",
     image: p29_img,
-    new_price: 4.99,
+    new_price: 7.99,
     
   },
   {
@@ -286,10 +286,10 @@ let all_product = [
   },
   {
     id: 32,
-    name: "A Question You Can Ask Yourself - EP",
+    name: "Soundtrack to a Headrush",
     category: "post-hardcore",
     image: p32_img,
-    new_price: 4.99,
+    new_price: 7.99,
     
   },
   {
@@ -318,7 +318,7 @@ let all_product = [
   },
   {
     id: 36,
-    name: "Life Between Sleep Demo - EP",
+    name: "The Octopus in the Igloo",
     category: "post-hardcore",
     image: p36_img,
     new_price: 4.99,
