@@ -10,11 +10,11 @@ const DescriptionBox = () => {
       </div>
       <div className="descriptionbox-description">
         <p>
-          Deep Cuts and Broken Hearts was created to help with nestalgic needs. Our demographic is aimed towards those who were in their scene/emo phase in the early/mid 2000s and want a chance to get albums they never got a chance to grab or lost... 
+          Deep Cuts and Broken Hearts was made for those who miss the past and held on. To those who said "it wasn't a phase". 
         </p>
         <p>
-        We get it, it's not a phase and more to follow on more records.
-        </p>
+        Whether its the underground deathcore you moshed to, whether it's the emo songs you listened to after your ex dumped you, whether its the metalcore songs you listened to on your way to your local Blockbuster. We have it all on Deep Cuts and Broken Hearts and ready to bring back that nostalgia feeling.
+      </p>
       </div>
     </div>
   );

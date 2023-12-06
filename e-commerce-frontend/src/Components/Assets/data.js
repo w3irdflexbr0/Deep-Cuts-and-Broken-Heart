@@ -6,7 +6,7 @@ import p4_img from './product_4.png'
 let data_product = [
   {
     id:1,
-    name:"The Masonic Diaries",
+    name:"No Mercy, No Forgiveness",
     image:p1_img,
     new_price: 7.99,
     
@@ -18,9 +18,9 @@ let data_product = [
     
   },
   {id:3,
-    name:"Bone Kingdom",
+    name:"Alligiance",
     image:p3_img,
-    new_price:4.99,
+    new_price:7.99,
    
   },
   {id:4,

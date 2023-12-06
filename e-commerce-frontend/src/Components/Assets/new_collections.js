@@ -10,7 +10,7 @@ import p8_img from "./product_28.png";
 let new_collections = [
   {
     id: 12,
-    name: "Strangled - EP",
+    name: "Eternal Purgatory - EP",
     image: p1_img,
     new_price: 4.99,
     

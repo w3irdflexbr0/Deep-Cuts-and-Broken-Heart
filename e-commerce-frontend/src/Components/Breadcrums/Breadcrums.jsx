@@ -1,11 +1,11 @@
-// Breadcrumbs Component
 
-//Import necessary dependencies and styles
+
+
 import React from 'react';
 import './Breadcrums.css'
 import arrow_icon from '../Assets/breadcrum_arrow.png'
 
-// Functional component Breadcrumbs, takes 'product' as a prop 
+
 const Breadcrumbs = (props) => {
   const { product } = props;
 

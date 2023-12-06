@@ -38,7 +38,7 @@ import p36_img from "./product_36.png";
 let all_product = [
   {
     id: 1,
-    name: "The Masonic Diaries",
+    name: "No Mercy, No Forgiveness",
     category: "deathcore",
     image: p1_img,
     new_price: 7.99,
@@ -51,13 +51,14 @@ let all_product = [
     image: p2_img,
     new_price: 7.99,
     
+    
   },
   {
     id: 3,
-    name: "Bone Kingdom - EP",
+    name: "Allegiance",
     category: "deathcore",
     image: p3_img,
-    new_price: 4.99,
+    new_price: 7.99,
   
   },
   {
@@ -78,7 +79,7 @@ let all_product = [
   },
   {
     id: 6,
-    name: "The Awakening",
+    name: "Ego Death",
     category: "deathcore",
     image: p6_img,
     new_price: 7.99,
@@ -101,7 +102,7 @@ let all_product = [
   },
   {
     id: 9,
-    name: "Hell on Earth - EP",
+    name: "Wretchedness - EP",
     category: "deathcore",
     image: p9_img,
     new_price: 4.99,
@@ -109,7 +110,7 @@ let all_product = [
   },
   {
     id: 10,
-    name: "Decomposing Reality - EP",
+    name: "Decomposing Normality - EP",
     category: "deathcore",
     image: p10_img,
     new_price: 4.99,
@@ -125,7 +126,7 @@ let all_product = [
   },
   {
     id: 12,
-    name: "Strangled - EP",
+    name: "Eternal Purgatory - EP",
     category: "deathcore",
     image: p12_img,
     new_price: 4.99,
@@ -133,7 +134,7 @@ let all_product = [
   },
   {
     id: 13,
-    name: "Dead Man in Reno",
+    name: "The Cycle of Hope",
     category: "metalcore",
     image: p13_img,
     new_price: 7.99,
