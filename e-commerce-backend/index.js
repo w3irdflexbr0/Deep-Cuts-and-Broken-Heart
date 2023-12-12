@@ -183,12 +183,20 @@ app.get("/featuredrecords", async (req, res) => {
 
 //Create an endpoint for saving the product in cart
 app.post('/addtocart', fetchuser, async (req, res) => {
-	console.log("Add Cart");
-    let userData = await Users.findOne({_id:req.user.id});
+  console.log("Add Cart");
+  try {
+    let userData = await Users.findOne({ _id: req.user.id });
     userData.cartData[req.body.itemId] += 1;
-    await Users.findOneAndUpdate({_id:req.user.id}, {cartData:userData.cartData});
-    res.send("Added")
-  })
+    await Users.findOneAndUpdate({ _id: req.user.id }, { cartData: userData.cartData });
+    console.log("Cart Updated Successfully");
+    res.json({ success: true, message: "Added" }); // Send a JSON response
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, error: "Internal Server Error" });
+  }
+});
+
+
 
   //Create an endpoint for saving the product in cart
 app.post('/removefromcart', fetchuser, async (req, res) => {

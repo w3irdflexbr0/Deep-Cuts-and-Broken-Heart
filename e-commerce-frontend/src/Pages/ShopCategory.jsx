@@ -8,11 +8,6 @@ import all_products from "../Components/Assets/all_product";
 import { ShopContext } from "../Context/ShopContext";
 
 
-
-
-
-
-
 const ShopCategory = (props) => {
 
   
