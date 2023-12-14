@@ -1,60 +1,51 @@
+const port = 4000;
 const express = require("express");
+const app = express();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
-require('dotenv').config();
-
-const app = express();
-const port = process.env.PORT || 4000;
-const mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/e-commerce";
-const jwtSecret = process.env.JWT_SECRET || "your_secret_key";
 
 app.use(express.json());
 app.use(cors());
 
-// Image Storage Engine 
+//Image Storage Engine 
 const storage = multer.diskStorage({
-  destination: './upload/images',
-  filename: (req, file, cb) => {
-    console.log(file);
-    return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
-  }
-});
+    destination: './upload/images',
+    filename: (req, file, cb) => {
+      console.log(file);
+        return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
+    }
+})
 
-const upload = multer({ storage: storage });
+const upload = multer({storage: storage})
 
 app.use('/images', express.static('upload/images'));
-
 app.post("/upload", upload.single('product'), (req, res) => {
-  res.json({
-    success: 1,
-    image_url: `http://localhost:${port}/images/${req.file.filename}`
-  });
-});
+    res.json({
+        success: 1,
+        image_url: `http://localhost:4000/images/${req.file.filename}`
+    })
+})
 
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB');
-});
+mongoose.connect("mongodb+srv://tsingh1998:easy@cluster0.fdatmhy.mongodb.net/e-commerce");
 
+// MiddleWare
 const fetchuser = async (req, res, next) => {
   const token = req.header("auth-token");
   if (!token) {
     res.status(401).send({ errors: "Please authenticate using a valid token" });
   }
   try {
-    const data = jwt.verify(token, jwtSecret);
+    const data = jwt.verify(token, "secret_ecom");
     req.user = data.user;
     next();
   } catch (error) {
     res.status(401).send({ errors: "Please authenticate using a valid token" });
   }
 };
-
+// Schema for creating user model
 const Users = mongoose.model("Users", {
   name: {
     type: String,
@@ -75,6 +66,7 @@ const Users = mongoose.model("Users", {
   },
 });
 
+// Schema for creating Product
 const Product = mongoose.model("Product", {
   id: {
     type: Number,
@@ -93,10 +85,10 @@ const Product = mongoose.model("Product", {
     required: true,
   },
   new_price: {
-    type: Number,
+    type: Number
   },
   old_price: {
-    type: Number,
+    type: Number
   },
   date: {
     type: Date,
@@ -257,6 +249,7 @@ app.post("/removeproduct", async (req, res) => {
   res.json({success:true,name:req.body.name})
 });
 
-app.listen(port, () => {
-  console.log(`Server Running on port ${port}`);
+app.listen(port, (error) => {
+  if (!error) console.log("Server Running on port " + port);
+  else console.log("Error : ", error);
 });
