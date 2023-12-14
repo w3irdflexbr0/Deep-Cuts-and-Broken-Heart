@@ -12,7 +12,7 @@ const LoginSignup = () => {
 
   const login = async () => {
     let dataObj;
-    await fetch('https://deep-cuts-and-broken-hearts.onrender.com/login', {
+    await fetch('https://deep-cuts-and-broken-hearts-backend.onrender.com/', {
       method: 'POST',
       headers: {
         Accept:'application/form-data',
