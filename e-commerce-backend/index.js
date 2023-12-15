@@ -29,7 +29,7 @@ app.post("/upload", upload.single('product'), (req, res) => {
     })
 })
 
-mongoose.connect("{Paste Your MongoDB URI Link Here}/e-commerce");
+mongoose.connect("mongodb+srv://tsingh1998:easy@cluster0.fdatmhy.mongodb.net/e-commerce");
 
 // MiddleWare
 const fetchuser = async (req, res, next) => {
