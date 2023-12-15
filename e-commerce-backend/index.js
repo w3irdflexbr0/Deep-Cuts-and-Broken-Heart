@@ -8,7 +8,7 @@ const path = require("path");
 const cors = require("cors");
 
 app.use(express.json());
-app.use(cors({ origin: 'https://deep-cuts-and-broken-hearts.onrender.com/' }));
+app.use(cors());
 
 //Image Storage Engine 
 const storage = multer.diskStorage({
@@ -106,7 +106,6 @@ app.get("/", (req, res) => {
 
 //Create an endpoint at ip/login for login the user and giving token
 app.post('/login', async (req, res) => {
-  await fetch('https://deep-cuts-and-broken-hearts-backend.onrender.com/login')
   console.log("Login");
     let success = false;
     let user = await Users.findOne({ email: req.body.email });
@@ -134,7 +133,6 @@ app.post('/login', async (req, res) => {
 
 //Create an endpoint at ip/auth for regestring the user in data base & sending token
 app.post('/signup', async (req, res) => {
-  await fetch('https://deep-cuts-and-broken-hearts-backend.onrender.com/signup')
   console.log("Sign Up");
         let success = false;
         let check = await Users.findOne({ email: req.body.email });
