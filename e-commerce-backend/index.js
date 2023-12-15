@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-  origin: 'https://deep-cuts-and-broken-hearts.onrender.com/',
+  origin: 'https://deep-cuts-and-broken-hearts.onrender.com',
   
 };
 app.use(cors(corsOptions));

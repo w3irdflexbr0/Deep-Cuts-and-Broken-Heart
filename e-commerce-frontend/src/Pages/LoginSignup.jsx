@@ -11,6 +11,10 @@ const LoginSignup = () => {
     }
 
   const login = async () => {
+    console.log('Request Headers:', {
+      Accept: 'application/form-data',
+      'Content-Type': 'application/json'
+    });
     let dataObj;
     await fetch('https://deep-cuts-and-broken-hearts-backend.onrender.com/login', {
       method: 'POST',
