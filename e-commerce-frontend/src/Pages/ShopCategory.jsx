@@ -17,7 +17,7 @@ const ShopCategory = (props) => {
 const [allproducts, setAllProducts] = useState([]); useContext(ShopContext);
 
   const fetchInfo = () => { 
-    fetch('http://localhost:4000/allproducts') 
+    fetch('https://deep-cuts-and-broken-hearts-backend.onrender.com/allproducts') 
             .then((res) => res.json()) 
             .then((data) => setAllProducts(data))
     }
