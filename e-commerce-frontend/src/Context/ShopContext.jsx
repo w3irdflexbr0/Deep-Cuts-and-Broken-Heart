@@ -65,7 +65,7 @@ const ShopContextProvider = (props) => {
     console.log("Adding to cart:", itemId);
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/addtocart", {
+      fetch("https://deep-cuts-and-broken-hearts-backend.onrender.com/addtocart", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -99,7 +99,7 @@ const ShopContextProvider = (props) => {
     console.log("Removing from cart:", itemId);
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/removefromcart", {
+      fetch("https://deep-cuts-and-broken-hearts-backend.onrender.com/removefromcart", {
         method: "POST",
         headers: {
           Accept: "application/json",
