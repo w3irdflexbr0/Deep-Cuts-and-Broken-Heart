@@ -15,7 +15,7 @@ const LoginSignup = () => {
     await fetch('https://deep-cuts-and-broken-hearts-backend.onrender.com/login', {
       method: 'POST',
       headers: {
-        Accept:'application/form-data',
+        Accept:'application/json',
         'Content-Type':'application/json',
       },
       body: JSON.stringify(formData),
@@ -38,7 +38,7 @@ const LoginSignup = () => {
     await fetch('https://deep-cuts-and-broken-hearts-backend.onrender.com/signup', {
       method: 'POST',
       headers: {
-        Accept:'application/form-data',
+        Accept:'application/json',
         'Content-Type':'application/json',
       },
       body: JSON.stringify(formData),
