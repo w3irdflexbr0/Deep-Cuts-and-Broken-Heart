@@ -8,7 +8,13 @@ const path = require("path");
 const cors = require("cors");
 
 app.use(express.json());
-app.use(cors());
+
+
+const corsOptions = {
+  origin: 'https://deep-cuts-and-broken-hearts.onrender.com/',
+  
+};
+app.use(cors(corsOptions));
 
 //Image Storage Engine 
 const storage = multer.diskStorage({
