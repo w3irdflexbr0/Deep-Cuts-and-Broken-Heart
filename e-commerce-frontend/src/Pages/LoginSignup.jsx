@@ -12,10 +12,10 @@ const LoginSignup = () => {
 
   const login = async () => {
     let dataObj;
-    await fetch('https://deep-cuts-and-broken-hearts-backend.onrender.com/login', {
+    await fetch('http://localhost:4000/login', {
       method: 'POST',
       headers: {
-        Accept:'application/json',
+        Accept:'application/form-data',
         'Content-Type':'application/json',
       },
       body: JSON.stringify(formData),
@@ -35,10 +35,10 @@ const LoginSignup = () => {
 
   const signup = async () => {
     let dataObj;
-    await fetch('https://deep-cuts-and-broken-hearts-backend.onrender.com/signup', {
+    await fetch('http://localhost:4000/signup', {
       method: 'POST',
       headers: {
-        Accept:'application/json',
+        Accept:'application/form-data',
         'Content-Type':'application/json',
       },
       body: JSON.stringify(formData),

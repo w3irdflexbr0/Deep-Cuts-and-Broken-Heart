@@ -8,15 +8,7 @@ const path = require("path");
 const cors = require("cors");
 
 app.use(express.json());
-
-const corsOptions = {
-  origin: 'https://deep-cuts-and-broken-hearts.onrender.com',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 //Image Storage Engine 
 const storage = multer.diskStorage({
@@ -37,7 +29,7 @@ app.post("/upload", upload.single('product'), (req, res) => {
     })
 })
 
-mongoose.connect("mongodb+srv://tsingh1998:easy@cluster0.fdatmhy.mongodb.net/e-commerce");
+mongoose.connect("{Paste Your MongoDB URI Link Here}/e-commerce");
 
 // MiddleWare
 const fetchuser = async (req, res, next) => {
@@ -182,29 +174,21 @@ app.get("/newcollections", async (req, res) => {
   res.send(arr);
 });
 
-app.get("/featuredrecords", async (req, res) => {
+app.get("/popularinwomen", async (req, res) => {
 	let products = await Product.find({});
   let arr = products.splice(0,  4);
-  console.log("Featured Records");
+  console.log("Popular In Women");
   res.send(arr);
 });
 
 //Create an endpoint for saving the product in cart
 app.post('/addtocart', fetchuser, async (req, res) => {
-  console.log("Add Cart");
-  try {
-    let userData = await Users.findOne({ _id: req.user.id });
+	console.log("Add Cart");
+    let userData = await Users.findOne({_id:req.user.id});
     userData.cartData[req.body.itemId] += 1;
-    await Users.findOneAndUpdate({ _id: req.user.id }, { cartData: userData.cartData });
-    console.log("Cart Updated Successfully");
-    res.json({ success: true, message: "Added" }); // Send a JSON response
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ success: false, error: "Internal Server Error" });
-  }
-});
-
-
+    await Users.findOneAndUpdate({_id:req.user.id}, {cartData:userData.cartData});
+    res.send("Added")
+  })
 
   //Create an endpoint for saving the product in cart
 app.post('/removefromcart', fetchuser, async (req, res) => {
