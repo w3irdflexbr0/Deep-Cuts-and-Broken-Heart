@@ -16,12 +16,12 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   useEffect(() => {
-    fetch("http://localhost:4000/allproducts")
+    fetch("https://deep-cuts-and-broken-hearts-backend.onrender.com/allproducts")
       .then((res) => res.json())
       .then((data) => setProducts(data));
 
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:4000/getcart", {
+      fetch("https://deep-cuts-and-broken-hearts-backend.onrender.com/getcart", {
         method: "POST",
         headers: {
           Accept: "application/json",
